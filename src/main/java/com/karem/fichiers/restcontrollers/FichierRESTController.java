@@ -20,7 +20,7 @@ public class FichierRESTController {
 	@Autowired
 	FichierService fichierService;
 	
-	@RequestMapping(method = RequestMethod.GET)
+	@RequestMapping(value="/all",method = RequestMethod.GET)
 	public List<Fichier> getAllFichiers() {
 		return fichierService.getAllFichiers();
 	}

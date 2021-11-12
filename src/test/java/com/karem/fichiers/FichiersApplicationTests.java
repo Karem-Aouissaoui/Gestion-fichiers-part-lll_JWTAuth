@@ -20,7 +20,7 @@ class FichiersApplicationTests {
 	@Autowired
 	private TypeRepository typeRepository;
 	
-	
+	/*
 	@Test
 	public void testCreateType() {
 		Type t = new Type("bin");
@@ -52,14 +52,14 @@ class FichiersApplicationTests {
 	public void testDeleteFichier() {
 		fichierRepository.deleteById(5L);
 	}
-	
+	*/
 	@Test
 	public void testListerTousFichiers() {
 		List<Fichier> fichiers = fichierRepository.findAll();
 		for (Fichier f : fichiers)
 			System.out.println(f);
 	}//done
-	
+	/*
 	@Test
 	public void testFindByNomFichier() {
 		List<Fichier> fichiers = fichierRepository.findByNomFichier("myfile");
@@ -119,5 +119,5 @@ class FichiersApplicationTests {
 		for (Fichier f : fichiers)
 			System.out.println(f);
 	}//done
-	
+	*/
 }

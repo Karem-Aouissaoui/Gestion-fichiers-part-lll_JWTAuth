@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -27,7 +28,7 @@ public class Type {
 	private String nomType;
 	
 	@JsonIgnore
-	@OneToMany(mappedBy = "type",cascade=CascadeType.ALL)
+	@OneToMany(mappedBy = "type",fetch = FetchType.LAZY)
 	private List<Fichier> fichiers;
 	
 	public Type(String nom) {
@@ -36,6 +37,9 @@ public class Type {
 
 	@Override
 	public String toString() {
-		return "Type [idType=" + idType + ", nomType=" + nomType + "]";
+		return "Type [idType=" + idType + ", nomType=" + nomType +  "]";
+		
 	}
+
+	
 }
