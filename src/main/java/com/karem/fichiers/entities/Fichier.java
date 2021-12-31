@@ -21,7 +21,7 @@ public class Fichier {
 	private Long idFichier;
 	private String nomFichier;
 	private Date dateCreation;
-	private Date dateModefication;
+	private Date dateModification;
 	private Double taille;
 	@ManyToOne
 	private Type type;
